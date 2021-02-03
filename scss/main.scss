@@ -1,0 +1,69 @@
+// colors
+$primary: #0094E7;
+$secondary: #f3f3f3;
+$white: #fff ;
+$black: #000;
+$dark: #262F38;
+
+// import settings
+@import "settings";
+
+// usp
+#landingpage{
+    .hidden{
+        display: none;
+    }
+
+    .lp-usp {
+        &__boxes {
+            @include flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    
+        &__box {
+            text-align: center;
+            margin: 10px;
+            width: calc(193px - 20px);
+            box-sizing: border-box;
+            padding: 0 8px;
+
+            svg{
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                display: block;
+            }
+    
+            .lp-link {
+                color: $dark;
+                text-decoration: underline;
+                margin-top: 12px;
+                line-height: 1.6;
+                transition: .3s ease-in-out;
+                display: inline-block;
+    
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// layout-0
+.layout-0 #articlePage #landingpage{
+    .lp-usp__box{
+        width: 150px;
+    }
+} 
+    
+// mobile and app
+@media only screen and (max-width: 980px){
+    .mobile #articlePage #landingpage,
+    .mobileapp #articlePage #landingpage{
+        .lp-usp__box{
+            width: 150px;
+        }
+    }
+}
